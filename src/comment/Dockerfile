@@ -1,5 +1,5 @@
-FROM ruby:2.2
-RUN apt-get update -qq && apt-get install -y build-essential
+FROM ruby:2.2-alpine
+RUN apk add --no-cache make gcc libc-dev
 
 WORKDIR /app
 
